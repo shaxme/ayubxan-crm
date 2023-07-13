@@ -8,6 +8,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import "./demo.css";
 import createDoc from "./exel";
+import { Button } from "@mui/material";
 
 function ccyFormat(num) {
   return Number(num).toFixed(2);
@@ -71,7 +72,7 @@ export default function SpanningTable() {
                       setfirst((value) => ({
                         ...value,
                         ["MM" + Number.parseFloat(row.desc.split(" ")[2])]:
-                          e.target.value
+                          e.target.value,
                       }));
                     }}
                     id="undifinded"
@@ -95,27 +96,31 @@ export default function SpanningTable() {
           </TableBody>
         </Table>
       </TableContainer>
-      <button
-        type="button"
-        onClick={() => {
-          console.log(+ccyFormat(invoiceSubtotal));
-          createDoc(
-            +ccyFormat(rows[0].unit),
-            +ccyFormat(rows[0].price),
-            +ccyFormat(rows[1].unit),
-            +ccyFormat(rows[1].price),
-            +ccyFormat(rows[2].unit),
-            +ccyFormat(rows[2].price),
-            +ccyFormat(rows[3].unit),
-            +ccyFormat(rows[3].price),
-            +ccyFormat(rows[4].unit),
-            +ccyFormat(rows[4].price),
-            +ccyFormat(invoiceSubtotal)
+      <div className="inputWrap">
+        <Button
+        sx={{width:"200px"}}
+          type="button"
+          variant="contained"
+          onClick={() => {
+            console.log(+ccyFormat(invoiceSubtotal));
+            createDoc(
+              +ccyFormat(rows[0].unit),
+              +ccyFormat(rows[0].price),
+              +ccyFormat(rows[1].unit),
+              +ccyFormat(rows[1].price),
+              +ccyFormat(rows[2].unit),
+              +ccyFormat(rows[2].price),
+              +ccyFormat(rows[3].unit),
+              +ccyFormat(rows[3].price),
+              +ccyFormat(rows[4].unit),
+              +ccyFormat(rows[4].price),
+              +ccyFormat(invoiceSubtotal)
             );
-        }}
-      >
-        Done
-      </button>
+          }}
+        >
+          Done
+        </Button>
+      </div>
     </>
   );
 }
