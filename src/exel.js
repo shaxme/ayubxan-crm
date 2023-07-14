@@ -50,7 +50,7 @@ function createDox(
         ["теплоизоляционные трубки 75 мм", "1.45 $", MM75, MM75Total + " $"],
         ["теплоизоляционные трубки 90 мм", "1.75 $", MM90, MM90Total + " $"],
         ["ИТОГ:", "", "", Total + " $"],
-        ['', '', '', String(date.getDay()).padStart(2, 0) + "." + String(date.getMonth()).padStart(2, 0) + "." + String(date.getFullYear()).padStart(2, 0)],
+        ['', '', '', String(date.getDate()).padStart(2, 0) + "." + String(date.getMonth()).padStart(2, 0) + "." + String(date.getFullYear()).padStart(2, 0)],
     ]);
     const columnWidths = [{ wch: 35 }];
     worksheet["!cols"] = columnWidths;
