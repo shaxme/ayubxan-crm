@@ -1,15 +1,31 @@
-.root {
+.roots {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.client , 
-.factory{
-    background-color: rgb(247,181,42);
-    margin-left: 30px;
-    width: 200px;
-    height: 50;
+.Logo {
+    width: 300px;
+    height: 200px;
+}
+
+.forCli {
+    margin-right: 20px;
+}
+
+.forFac,
+.forCli {
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.forFac:hover ,
+.forCli:hover {
+    background-color: black;
+    color: #fff;
 }
 
 .btn-box {
@@ -18,18 +34,11 @@
 
 }
 
-.Logo {
-    width: 300;
-    height: 140px;
-    margin: 0;
+
+button:active {
+    scale: 1;
 }
 
-.forCli {
-    color: #fff;
-    text-decoration: none;
-}
-
-.forFac {
-    color: #fff;
-    text-decoration: none;
+svg {
+    overflow: visible !important;
 }

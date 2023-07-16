@@ -66,7 +66,9 @@ export default function SpanningTable() {
   return (
     <>
       <header>
-        <img className="logo" src="/img/Soflex.png" alt="logo" />
+        <a href="/">
+          <img className="logo" src="/img/isoflex.jpeg" alt="logo" />
+        </a>
         <p className="text">Страница клиента</p>
       </header>
 
