@@ -7,7 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import "./Demo.css";
-import createDoc from "../exelForFactory";
+import createDocForFactory from "../exelForFactory";
 import { Button } from "@mui/material";
 
 function ccyFormat(num) {
@@ -122,7 +122,7 @@ export default function SpanningTable() {
           variant="contained"
           onClick={() => {
             console.log(+ccyFormat(invoiceSubtotal));
-            createDoc(
+            createDocForFactory(
               +ccyFormat(rows[0].unit),
               +ccyFormat(rows[0].price),
               +ccyFormat(rows[1].unit),

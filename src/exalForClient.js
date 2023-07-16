@@ -1,7 +1,7 @@
 const XLSX = require("xlsx");
 const date = new Date();
 
-function createDox(
+export default function createDoxForClient(
   MM6,
   MM6Total,
   MM9,
@@ -57,7 +57,7 @@ function createDox(
   worksheet["!cols"] = columnWidths;
 
   XLSX.utils.book_append_sheet(workbook, worksheet, "Sheet1");
-  XLSX.writeFile(workbook, "output.xlsx");
+  XLSX.writeFile(workbook, "дляЗавода.xlsx");
 }
 
-module.exports = createDox;
+module.exports = createDoxForClient;
