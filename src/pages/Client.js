@@ -7,7 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import "./Demo.css";
-import createDocForClient from "../exalForClient";
+import createDocForClient from "./exelForClient";
 import { Button } from "@mui/material";
 
 function ccyFormat(num) {
@@ -155,7 +155,7 @@ export default function SpanningTable() {
             );
           }}
         >
-          Done
+          Download
         </Button>
       </div>
     </>

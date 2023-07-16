@@ -57,7 +57,5 @@ export default function createDoxForClient(
   worksheet["!cols"] = columnWidths;
 
   XLSX.utils.book_append_sheet(workbook, worksheet, "Sheet1");
-  XLSX.writeFile(workbook, "дляЗавода.xlsx");
+  XLSX.writeFile(workbook, "дляКлиента.xlsx");
 }
-
-module.exports = createDoxForClient;

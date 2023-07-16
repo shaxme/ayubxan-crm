@@ -1,7 +1,7 @@
 const XLSX = require("xlsx");
 const date = new Date();
 
-export default function createDoxForFactory(
+export default function createDoc(
   MM6,
   MM6Total,
   MM9,
@@ -57,7 +57,6 @@ export default function createDoxForFactory(
   worksheet["!cols"] = columnWidths;
 
   XLSX.utils.book_append_sheet(workbook, worksheet, "Sheet1");
-  XLSX.writeFile(workbook, "дляКлиента.xlsx");
+  XLSX.writeFile(workbook, "дляЗавода.xlsx");
 }
 
-module.exports = createDoxForFactory;
