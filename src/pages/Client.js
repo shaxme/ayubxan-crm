@@ -7,7 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import "./Demo.css";
-import createDoc from "../exalForClient";
+import createDocForClient from "../exalForClient";
 import { Button } from "@mui/material";
 
 function ccyFormat(num) {
@@ -66,7 +66,7 @@ export default function SpanningTable() {
   return (
     <>
       <header>
-        <img className="logo" src="/img/Soflex.png" alt="logo"/>
+        <img className="logo" src="/img/Soflex.png" alt="logo" />
         <p className="text">Страница клиента</p>
       </header>
 
@@ -122,7 +122,7 @@ export default function SpanningTable() {
           variant="contained"
           onClick={() => {
             console.log(+ccyFormat(invoiceSubtotal));
-            createDoc(
+            createDocForClient(
               +ccyFormat(rows[0].unit),
               +ccyFormat(rows[0].price),
               +ccyFormat(rows[1].unit),
