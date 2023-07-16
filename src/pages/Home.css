@@ -1,0 +1,35 @@
+.root {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.client , 
+.factory{
+    background-color: rgb(247,181,42);
+    margin-left: 30px;
+    width: 200px;
+    height: 50;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.Logo {
+    width: 300;
+    height: 140px;
+    margin: 0;
+}
+
+.forCli {
+    color: #fff;
+    text-decoration: none;
+}
+
+.forFac {
+    color: #fff;
+    text-decoration: none;
+}

@@ -6,8 +6,8 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import "./demo.css";
-import createDoc from "./exel";
+import "./Demo.css";
+import createDoc from "../exalForClient";
 import { Button } from "@mui/material";
 
 function ccyFormat(num) {
@@ -34,7 +34,6 @@ export default function SpanningTable() {
     MM12: 0,
     MM16: 0,
     MM20: 0,
-    MM20: 0,
     MM22: 0,
     MM25: 0,
     MM28: 0,
@@ -47,31 +46,33 @@ export default function SpanningTable() {
   });
 
   const rows = [
-    createRow("теплоизоляционные трубки 6мм", 0.17, first.MM6),
-    createRow("теплоизоляционные трубки 9мм", 0.21, first.MM9),
-    createRow("теплоизоляционные трубки 12мм", 0.25, first.MM12),
-    createRow("теплоизоляционные трубки 16мм", 0.29, first.MM16),
-    createRow("теплоизоляционные трубки 20мм", 0.33, first.MM20),
-    createRow("теплоизоляционные трубки 22мм", 0.34, first.MM22),
-    createRow("теплоизоляционные трубки 25мм", 0.40, first.MM25),
-    createRow("теплоизоляционные трубки 28мм", 0.41, first.MM28),
-    createRow("теплоизоляционные трубки 32мм", 0.43, first.MM32),
-    createRow("теплоизоляционные трубки 40мм", 0.57, first.MM40),
-    createRow("теплоизоляционные трубки 50мм", 0.83, first.MM50),
-    createRow("теплоизоляционные трубки 63мм", 1.12, first.MM63),
-    createRow("теплоизоляционные трубки 75мм", 1.45, first.MM75),
-    createRow("теплоизоляционные трубки 90мм", 1.75, first.MM90),
+    createRow("теплоизоляционные трубки 6мм", 0.19, first.MM6),
+    createRow("теплоизоляционные трубки 9мм", 0.23, first.MM9),
+    createRow("теплоизоляционные трубки 12мм", 0.27, first.MM12),
+    createRow("теплоизоляционные трубки 16мм", 0.32, first.MM16),
+    createRow("теплоизоляционные трубки 20мм", 0.36, first.MM20),
+    createRow("теплоизоляционные трубки 22мм", 0.37, first.MM22),
+    createRow("теплоизоляционные трубки 25мм", 0.44, first.MM25),
+    createRow("теплоизоляционные трубки 28мм", 0.45, first.MM28),
+    createRow("теплоизоляционные трубки 32мм", 0.47, first.MM32),
+    createRow("теплоизоляционные трубки 40мм", 0.62, first.MM40),
+    createRow("теплоизоляционные трубки 50мм", 0.90, first.MM50),
+    createRow("теплоизоляционные трубки 63мм", 1.22, first.MM63),
+    createRow("теплоизоляционные трубки 75мм", 1.58, first.MM75),
+    createRow("теплоизоляционные трубки 90мм", 1.90, first.MM90),
   ];
   const invoiceSubtotal = subtotal(rows);
 
   return (
     <>
+      <header>
+        <img className="logo" src="/img/Soflex.png" alt="logo"/>
+        <p className="text">Страница клиента</p>
+      </header>
+
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="spanning table">
           <TableHead>
-            <TableRow>
-              <h2 style={{ marginLeft: "15px" }}>Zakazniy Stol</h2>
-            </TableRow>
             <TableRow>
               <TableCell>Marteril UI</TableCell>
               <TableCell align="right">Narxi</TableCell>
@@ -115,8 +116,8 @@ export default function SpanningTable() {
         </Table>
       </TableContainer>
       <div className="inputWrap">
-        <Button
-        sx={{width:"200px"}}
+        <Button className="btn"
+          sx={{ width: "200px" }}
           type="button"
           variant="contained"
           onClick={() => {
