@@ -36,7 +36,7 @@ export default function createDoxForClient(
   const worksheet = XLSX.utils.aoa_to_sheet([
     ["НАКЛАДНОЙ ЛИСТ", "цена", "Кол-во", "Сумма"],
     ...(MM6 !== 0 ? [["Теплоизоляционные трубки 6 мм", "0.19 $", MM6, MM6Total + " $"]] : []),
-    ...(MM9 !== 0 ? [["Теплоизоляционные трубки 25 мм", "0.23 $", MM9, MM9Total + " $"]] : []),
+    ...(MM9 !== 0 ? [["Теплоизоляционные трубки 9 мм", "0.23 $", MM9, MM9Total + " $"]] : []),
     ...(MM12 !== 0 ? [["Теплоизоляционные трубки 12 мм", "0.27 $", MM12, MM12Total + " $"]] : []),
     ...(MM16 !== 0 ? [["Теплоизоляционные трубки 16 мм", "0.32 $", MM16, MM16Total + " $"]] : []),
     ...(MM20 !== 0 ? [["Теплоизоляционные трубки 20 мм", "0.36 $", MM20, MM20Total + " $"]] : []),
@@ -52,7 +52,7 @@ export default function createDoxForClient(
     ["ИТОГ:", "", "", Total + " $"],
     ["", "", "", String(date.getDate()).padStart(2, 0) + "." + String(date.getMonth()).padStart(2, 0) + "." + String(date.getFullYear()).padStart(2, 0)],
   ]);
-
+  
   const columnWidths = [{ wch: 35 }];
   worksheet["!cols"] = columnWidths;
 
