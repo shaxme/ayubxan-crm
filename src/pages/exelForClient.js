@@ -30,7 +30,8 @@ export default function createDoxForClient(
   MM75Total,
   MM90,
   MM90Total,
-  Total
+  Total,
+  name
 ) {
   const workbook = XLSX.utils.book_new();
   const worksheet = XLSX.utils.aoa_to_sheet([
@@ -50,9 +51,10 @@ export default function createDoxForClient(
     ...(MM75 !== 0 ? [["теплоизоляционные трубки 75 мм", "1.58 $", MM75, MM75Total + " $"]] : []),
     ...(MM90 !== 0 ? [["теплоизоляционные трубки 90 мм", "1.90 $", MM90, MM90Total + " $"]] : []),
     ["ИТОГ:", "", "", Total + " $"],
-    ["", "", "", String(date.getDate()).padStart(2, 0) + "." + String(date.getMonth()).padStart(2, 0) + "." + String(date.getFullYear()).padStart(2, 0)],
+    ["Имя: ", '', '', name],
+    ["", "", "", String(date.getDate()).padStart(2, 0) + "." + String(date.getMonth()).padStart(2, 0) + "." + String(date.getFullYear()).padStart(2, 0)]
   ]);
-  
+
   const columnWidths = [{ wch: 35 }];
   worksheet["!cols"] = columnWidths;
 

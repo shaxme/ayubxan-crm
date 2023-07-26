@@ -44,6 +44,7 @@ export default function SpanningTable() {
     MM75: 0,
     MM90: 0,
   });
+  const [name, setName] = React.useState('')
 
   const rows = [
     createRow("теплоизоляционные трубки 6мм", 0.17, first.MM6),
@@ -116,6 +117,7 @@ export default function SpanningTable() {
             </TableRow>
           </TableBody>
         </Table>
+        <input className="inputnumber inputName" type="text" placeholder="Имя" onChange={(e) => setName(e.target.value)} required/>
       </TableContainer>
       <div className="inputWrap">
         <Button className="btn"
@@ -153,7 +155,7 @@ export default function SpanningTable() {
               +ccyFormat(rows[12].price),
               +ccyFormat(rows[13].unit),
               +ccyFormat(rows[13].price),
-              +ccyFormat(invoiceSubtotal)
+              +ccyFormat(invoiceSubtotal), name
             );
           }}
         >
