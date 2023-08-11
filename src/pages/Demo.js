@@ -117,7 +117,7 @@ export default function SpanningTable() {
             </TableRow>
           </TableBody>
         </Table>
-        <input className="inputnumber inputName" type="text" placeholder="Имя" onChange={(e) => setName(e.target.value)} required/>
+        <input className="inputnumber inputName" type="text" placeholder="Имя" onChange={(e) => setName(e.target.value)} required A Q />
       </TableContainer>
       <div className="inputWrap">
         <Button className="btn"

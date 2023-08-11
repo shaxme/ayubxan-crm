@@ -44,7 +44,7 @@ export default function SpanningTable() {
     MM75: 0,
     MM90: 0,
   });
-  const [name,setNmae]= React.useState('')
+  const [name, setNmae] = React.useState('')
 
   const rows = [
     createRow("теплоизоляционные трубки 6мм", 0.19, first.MM6),
@@ -117,7 +117,7 @@ export default function SpanningTable() {
             </TableRow>
           </TableBody>
         </Table>
-        <input className="inputnumber inputName" type="text"  placeholder="Name" onChange={(e)=>setNmae(e.target.value)}/>
+        <input className="inputnumber inputName" type="text" placeholder="Name" onChange={(e) => setNmae(e.target.value)} />
       </TableContainer>
       <div className="inputWrap">
         <Button className="btn"
