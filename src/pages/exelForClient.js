@@ -52,7 +52,7 @@ export default function createDoxForClient(
     ...(MM90 !== 0 ? [["теплоизоляционные трубки 90 мм", "1.90 $", MM90 + "m", MM90Total + " $"]] : []),
     ["ИТОГ:", "", "", Total + " $"],
     ["Имя: ", '', '', name],
-    ["час/дата", "", "", String(date.getHours()).padStart(2, 0) + "ч" + String(date.getMinutes()).padStart(2, 0) + "м" + String(date.getSeconds()).padStart(2, 0) + "c              /                " + String(date.getDate()).padStart(2, 0) + "." + String(date.getMonth()).padStart(2, 0) + "." + String(date.getFullYear()).padStart(2, 0)]
+    ["час/дата", "", "", String(date.getHours()).padStart(2, 0) + "ч" + String(date.getMinutes()).padStart(2, 0) + "м" + String(date.getSeconds()).padStart(2, 0) + "c        /         " + String(date.getDate()).padStart(2, 0) + "." + String(date.getMonth()).padStart(2, 0) + "." + String(date.getFullYear()).padStart(2, 0)]
   ]);
 
   const columnWidths = [{ wch: 35 }, { wch: 10 }, { wch: 10 }, { wch: 28 }];
