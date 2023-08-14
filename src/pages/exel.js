@@ -35,7 +35,7 @@ export default function createDoc(
 ) {
   const workbook = XLSX.utils.book_new();
   const worksheet = XLSX.utils.aoa_to_sheet([
-    ["НАКЛАДНОЙ ЛИСТ", "цена", "Кол-во", "Сумма"],
+    ["НАКЛАДНОЙ ЛИСТ", "Цена", "Кол-во", "Сумма"],
     ...(MM6 !== 0 ? [["Теплоизоляционные трубки 6 мм", "0.17 $", MM6 + "m", MM6Total + " $"]] : []),
     ...(MM9 !== 0 ? [["Теплоизоляционные трубки 9 мм", "0.21 $", MM9 + "m", MM9Total + " $"]] : []),
     ...(MM12 !== 0 ? [["Теплоизоляционные трубки 12 мм", "0.25 $", MM12 + "m", MM12Total + " $"]] : []),
@@ -51,8 +51,8 @@ export default function createDoc(
     ...(MM75 !== 0 ? [["теплоизоляционные трубки 75 мм", "1.45 $", MM75 + "m", MM75Total + " $"]] : []),
     ...(MM90 !== 0 ? [["теплоизоляционные трубки 90 мм", "1.75 $", MM90 + "m", MM90Total + " $"]] : []),
     ["ИТОГ:", "", "", Total + " $"],
-    ["Имя: ", '', '', name],
-    ["час/дата", "", "", String(date.getHours()).padStart(2, 0) + "ч" + String(date.getMinutes()).padStart(2, 0) + "м" + String(date.getSeconds()).padStart(2, 0) + "c        /         " + String(date.getDate()).padStart(2, 0) + "." + String(date.getMonth()).padStart(2, 0) + "." + String(date.getFullYear()).padStart(2, 0)]
+    ["Час/Дата", "", "", String(date.getHours()).padStart(2, 0) + "ч" + String(date.getMinutes()).padStart(2, 0) + "м" + String(date.getSeconds()).padStart(2, 0) + "c        /         " + String(date.getDate()).padStart(2, 0) + "." + String(date.getMonth()).padStart(2, 0) + "." + String(date.getFullYear()).padStart(2, 0)],
+    [`Имя: ${name}`, '', '', ""]
   ]);
 
   const columnWidths = [{ wch: 35 }, { wch: 10 }, { wch: 10 }, { wch: 28 }];
